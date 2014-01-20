@@ -1,8 +1,10 @@
-﻿/* device size screen - http://itnotepad.ru/wp-content/uploads/2013/02/screentablephone1.jpg */
-
-.dx-gallery {
+﻿.dx-gallery {
     position: absolute;
 
+}
+
+.gallery-item {
+    height: 100%;
 }
 
 @media only screen 

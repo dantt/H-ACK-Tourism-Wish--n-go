@@ -67,6 +67,48 @@
                 var toast = $("#toast-custom").data("dxToast");
                 toast.show();
             }
+        },
+        popover: {
+            visible: ko.observable(false),
+            toggle: function() {
+                this.popover.visible(!this.popover.visible());
+            },
+            close: function() {
+                this.popover.visible(false);
+            },
+            colors: ["Red", "Green", "Blue", "White", "Black"]
+        },
+        dialogs: {
+            notify: function(){
+                DevExpress.ui.notify("Sample message", "success", 1000);
+            },
+            alert: function() {
+                DevExpress.ui.dialog.alert("Sample message", "Alert");
+            },
+            confirm: function() {
+                DevExpress.ui.dialog.confirm("Sample message", "Confirm");
+            },
+            custom: {
+                show: function() {
+                    var replace = function() {
+                        return "Replace";
+                    };
+                    var rename = function() {
+                        return "Rename";
+                    };
+                    var customDialog = DevExpress.ui.dialog.custom({
+                        title: "Item exists",
+                        message: "<strong><em>The item already exists</em></strong>",
+                        buttons: [
+                            { text: "Replace", clickAction: replace },
+                            { text: "Rename", clickAction: rename }
+                        ]
+                    });
+                    customDialog.show().done(function(dialogResult) {
+                        DevExpress.ui.notify(dialogResult, "info", 1000);
+                    });
+                }
+            }
         }
     };
     return viewModel;

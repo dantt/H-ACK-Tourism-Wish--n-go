@@ -10,7 +10,7 @@ body {
 .dx-theme-win8 .layout-content {
     background: #1D1D1D;
 }
-.dx-theme-win8 .dx-toolbar .dx-toolbar-label {
+.dx-theme-win8.dx-device-phone .dx-toolbar .dx-toolbar-label {
     font-size: 20pt;
     padding-top: 5px;
 }
@@ -34,4 +34,32 @@ body {
 .dx-theme-win8 .dx-button .dx-icon {
     width: 20px;
     height: 20px;
+}
+.dx-theme-tizen .layout-frame {
+    border-left: 1px solid #393D3F;
+    margin-left: -1px;
+}
+
+.dx-theme-android .dx-fieldset .dx-field .dx-field-value {
+    text-align: right;
+}
+
+@media (orientation:portrait) {
+    .dx-theme-ios.dx-version-major-7 .dx-field-value.radio-buttons {
+        height: 120px;
+    }
+
+    .dx-theme-ios.dx-version-major-7 .dx-field-value.radio-buttons .dx-radio-group {
+        top: 23px;
+    }
+
+    .dx-theme-ios.dx-version-major-5 .dx-field-value.radio-buttons,
+    .dx-theme-ios.dx-version-major-6 .dx-field-value.radio-buttons {
+        height: 68px;
+    }
+
+    .dx-theme-ios.dx-version-major-5 .dx-field-value.radio-buttons .dx-radio-group,
+    .dx-theme-ios.dx-version-major-6 .dx-field-value.radio-buttons .dx-radio-group {
+        top: 26px;
+    }
 }

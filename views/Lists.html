@@ -1,14 +1,35 @@
-﻿<div data-options="dxView : { name: 'Lists', title: 'Lists' } " >
+<div data-options="dxView : { name: 'Lists', title: 'Lists' } " >
+    <div data-bind="dxCommand: { title: editTitle, action: editList, icon: 'edit', id: 'save', visible: editButtonVisible, type: 'danger' }" ></div>
+
     <div data-options="dxContent : { targetPlaceholder: 'content' } " >
         <div id="tabs" data-bind="dxTabs: { items: tabs, selectedIndex: selectedTab }"></div>
-        <!-- ko if: tabContent().customTemplate -->
-        <!-- ko if: tabContent().showSearchField -->
-        <div class="search-wrapper">
-            <div data-bind="dxTextBox: { placeholder: 'Search', mode: 'search', value: tabContent().searchQuery, valueUpdateEvent: 'keyup' } "></div>
+                
+        <div class="list-content" data-bind="if: simpleList.rendered, visible: simpleList.listVisible">
+            <!-- ko if: editEnabled -->
+                <div class="editType-wrapper" data-bind="dxSelectBox: { dataSource: deleteTypes, value: deleteType }"></div>
+            <!-- /ko -->
+            <!-- ko with: simpleList -->
+            <div class="list-indentation" data-bind="dxList: {dataSource: dataSource, pullRefreshEnabled: true, editEnabled: editEnabled, editConfig: editConfig}"></div>
+            <!-- /ko -->
         </div>
-        <!-- /ko -->
-        <div class="list-indentation">
-            <div data-bind="dxList: { items: tabContent().items, grouped: tabContent().grouped }">
+
+        <div class="list-content" data-bind="if: groupedList.rendered, visible: groupedList.listVisible">
+            <!-- ko with: groupedList -->
+            <div class="list-indentation" data-bind="dxList: {dataSource: dataSource, grouped: true}">
+                <div data-options="dxTemplate: { name: 'item'}">
+                    <div data-bind="text: $data"></div>
+                </div>
+                <div data-options="dxTemplate: { name: 'group'}">
+                    <div data-bind="text: key"></div>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+
+        <div class="list-content" data-bind="if: customList.rendered, visible: customList.listVisible">
+            <div class="search-wrapper" data-bind="dxTextBox: { placeholder: 'Search', mode: 'search', value: customList.searchQuery, valueUpdateEvent: 'keyup' } "></div> 
+            <!-- ko with: customList -->
+            <div class="list-indentation" data-bind="dxList: {dataSource: dataSource, searchQuery: searchQuery}">
                 <div data-options="dxTemplate : { name: 'item' } " >
                     <div>
                         <div class="product-image-box">
@@ -21,12 +42,8 @@
                     </div>
                 </div>
             </div>
+            <!-- /ko -->
         </div>
-        <!-- /ko -->
-        <!-- ko ifnot: tabContent().customTemplate -->
-        <div class="list-indentation">
-            <div data-bind="dxList: { items: tabContent().items, grouped: tabContent().grouped }"></div>
-        </div>
-        <!-- /ko -->
+
     </div>
 </div>

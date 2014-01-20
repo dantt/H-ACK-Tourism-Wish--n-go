@@ -1,46 +1,82 @@
 ﻿KitchenSink.Lists = function(params) { 
-    var lists = [
-        {
-            items: KitchenSink.db.products,
-            grouped: ko.observable(false),
-            customTemplate: ko.observable(false),
-            showSearchField: ko.observable(false)
-        },
-        {
-            items: KitchenSink.db.productsGrouped,
-            grouped: ko.observable(true),
-            customTemplate: ko.observable(false),
-            showSearchField: ko.observable(false)
-        },
-        {
-            items: ko.observable(KitchenSink.db.productsCustom),
-            grouped: ko.observable(false),
-            customTemplate: ko.observable(true),
-            showSearchField: ko.observable(true),
-            searchQuery: ko.observable().extend({ throttle: 500 })
-        }
-    ];
+
+    var deleteTypes = ["toggle", "slideButton", "slideItem", "swipe", "hold"];
 
     var viewModel = {
+
+        deleteTypes: deleteTypes,
+
+        deleteType: ko.observable(deleteTypes[0]),
+
         tabs: [
-            { text: "Simple" },
-            { text: "Grouped" },
-            { text: "Custom" }
+           { text: "Simple" },
+           { text: "Grouped" },
+           { text: "Custom" }
         ],
-        selectedTab: ko.observable(0),
-        tabContent: ko.observable()
+
+        selectedTab: ko.observable(),
+
+        simpleList: {
+            dataSource: new DevExpress.data.DataSource({ store: KitchenSink.db.products }),
+            rendered: ko.observable(false)
+        },
+
+        groupedList: {
+            dataSource: new DevExpress.data.DataSource({ store: KitchenSink.db.productsGrouped }),
+            rendered: ko.observable(false)
+        },
+
+        customList: {
+            dataSource: new DevExpress.data.DataSource({ store: KitchenSink.db.productsCustom }),
+            rendered: ko.observable(false),
+            searchQuery: ko.observable().extend({ throttle: 500 })
+        },
+
+        editEnabled: ko.observable(false),
+
+        editList: function() {
+            viewModel.editEnabled(!viewModel.editEnabled());
+        }
     };
 
-    lists[2].searchQuery.subscribe(function(value) {
-        var result = $.grep(KitchenSink.db.productsCustom, function(product, index) {
-            var regExp = new RegExp(value, "i");
-            return !!product.Name.match(regExp);
+    $.each(["simpleList", "groupedList", "customList"], function(i, list) {
+        viewModel[list].listVisible = ko.computed(function() {
+            return viewModel.selectedTab() === i;
         });
-        lists[2].items(result);
+
+        viewModel.selectedTab.subscribe(function(value) {
+            if(viewModel[list].rendered())
+                return;
+            if(value === i)
+                viewModel[list].rendered(true);
+        });
+
+        if(i < 2) {
+            viewModel[list].editEnabled = viewModel.editEnabled;
+
+            viewModel[list].editConfig = ko.computed(function() {
+                return {
+                    deleteMode: viewModel.deleteType(),
+                    deleteEnabled: true
+                }
+            });
+        }
     });
-    ko.computed(function() {
-        viewModel.tabContent(lists[viewModel.selectedTab()]);
+
+    viewModel.editTitle = ko.computed(function() {
+        return viewModel.editEnabled() ? "Done" : "Edit";
     });
-    
+
+    viewModel.editButtonVisible = ko.computed(function() {
+        return viewModel.selectedTab() === 0;
+    });
+
+    viewModel.customList.searchQuery.subscribe(function(value) {
+        viewModel.customList.dataSource.filter("Name", "contains", value);
+        viewModel.customList.dataSource.load();
+    });
+
+    viewModel.selectedTab(0);
+
     return viewModel;
 };

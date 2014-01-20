@@ -1,45 +1,5 @@
 ﻿KitchenSink.Navigation = function(params) {
     var viewModel = {
-        toolbar: {
-            items: [
-              {
-                  align: "left",
-                  widget: "button",
-                  options: {
-                      type: "back",
-                      text: "Back",
-                      clickAction: function(e) {
-                          KitchenSink.app.navigate("Home", { root: true });
-                      }
-                  }
-              },
-              {
-                  align: "right",
-                  widget: "button",
-                  options: {
-                      icon: "plus",
-                      clickAction: function(e) {
-                          console.log("plus click")
-                      }
-                  }
-              },
-              {
-                  align: "right",
-                  widget: "dropDownMenu",
-                  options: {
-                      items: [
-                          "Add",
-                          "Edit",
-                          "Remove"
-                      ]
-                  }
-              },
-              {
-                  align: "center",
-                  text: "Toolbar"
-              }
-            ]
-        },
         navbar: {
             currentImage: ko.observable("./content/images/navigation/icon-home.png"),
             itemClickAction: function(e) {

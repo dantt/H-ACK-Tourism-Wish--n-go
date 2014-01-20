@@ -2,12 +2,7 @@
     var viewModel = {
         autocomplete: {
             text: ko.observable(""),
-            cities: [
-                "New York","Los Angeles","Chicago","Houston","Philadelphia","Phoenix","San Antonio",
-                "San Diego","Dallas","San Jose","Jacksonville","Indianapolis","Austin","San Francisco",
-                "Columbus","Fort Worth","Charlotte","Detroit","El Paso","Memphis","Boston","Seattle",
-                "Denver","Baltimore","Washington","Nashville","Louisville","Milwaukee","Portland","Oklahoma"
-            ]
+            cities: KitchenSink.db.cities
         },
         "switch": {
             value: ko.observable(true)
@@ -17,14 +12,25 @@
         },
         rangeSlider: {
             minValue: ko.observable(3),
-            maxValue: ko.observable(7),
+            maxValue: ko.observable(7)
         },
         lookup: {
             data: ["red", "green", "blue", "yellow"],
             value: ko.observable(null)
         },
+        selectbox: {
+            data: ["light", "dark"],
+            value: ko.observable(null)
+        },
         checkbox: {
             checked: ko.observable(false)
+        },
+        radioGroup: {
+            items: [
+                { text: "Tea" },
+                { text: "Coffee" },
+                { text: "Juice" }
+            ]
         }
     };
 

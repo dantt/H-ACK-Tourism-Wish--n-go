@@ -12,16 +12,26 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#313234', endColorstr='#19191a',GradientType=0 );
 }
 
-.home-demo-logo
-{
-    position: absolute;    
+.home-demo-logo > img {
+    display: block;
+    position: absolute;
     top: 50%;
     left: 50%;
-    width: 234px;
     height: 308px;
-    margin-top: -180px;
+    width: 234px;
     margin-left: -117px;
-    background: url(../content/images/demo-logo.png) no-repeat center center;
+    margin-top: -154px;
+}
+
+@media screen 
+and (max-height : 361px) 
+and (orientation : landscape) {
+    .home-demo-logo > img {
+        width: 140px;
+        height: 184px;
+        margin-left: -70px;
+        margin-top: -92px;
+    }
 }
 
 .home-dx-logo

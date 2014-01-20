@@ -1,4 +1,4 @@
-﻿<div data-options="dxView : { name: 'Form', title: 'Form' } ">
+<div data-options="dxView : { name: 'Form', title: 'Form' } ">
     <div class="form" data-options="dxContent : { targetPlaceholder: 'content' } ">
         <div class="content" data-bind="dxScrollView: { }">
             <div class="dx-fieldset">
@@ -41,13 +41,19 @@
                 <div class="dx-field">
                     <div class="dx-field-label">Autocomplete</div>
                     <div class="dx-field-value">
-                        <div data-bind="dxAutocomplete: { value: autocomplete.text, dataSource: autocomplete.cities, placeholder: 'Start typing ...' }"></div>
+                        <div data-bind="dxAutocomplete: { value: autocomplete.text, dataSource: autocomplete.cities, placeholder: 'Select city ...' }"></div>
                     </div>
                 </div>
                 <div class="dx-field">
                     <div class="dx-field-label">Lookup</div>
                     <div class="dx-field-value">
                         <div data-bind="dxLookup: { title: 'Color Picker', dataSource: lookup.data, value: lookup.value, searchEnabled: true, placeholder: 'Select color ...' }"></div>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">SelectBox</div>
+                    <div class="dx-field-value">
+                        <div data-bind="dxSelectBox: { value: selectbox.value, dataSource: selectbox.data }"></div>
                     </div>
                 </div>
             </div>
@@ -63,6 +69,12 @@
                     <div class="dx-field-label">Checkbox</div>
                     <div class="dx-field-value">
                         <div data-bind="dxCheckBox: { checked: checkbox.checked }"></div>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">RadioGroup</div>
+                    <div class="dx-field-value radio-buttons">
+                        <div data-bind="dxRadioGroup: { layout: 'horizontal', items: radioGroup.items}"></div>
                     </div>
                 </div>
             </div>
