@@ -86,45 +86,30 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
 
     "navigation": [
       {
-        "title": "Form",
-        "action": "#Form",
-        "icon": "todo"
+        "title": "Home",
+        "action": "/",
+        "icon": "home"
       },
       {
-        "title": "Overlays",
-        "action": "#Overlays",
-        "icon": "tips"
+        "title": "Le mie prenotazioni",
+        "action": "#Bookings",
+        "icon": "booking"
       },
       {
-        "title": "Lists",
-        "action": "#Lists",
-        "icon": "card"
+        "title": "Il mio Fuel Level",
+        "action": "#fuel",
+        "icon": "fuel"
       },
       {
-        "title": "Maps",
-        "action": "#Maps",
-        "icon": "map"
+        "title": "Agenda",
+        "action": "#Agenda",
+        "icon": "agenda"
       },
       {
-        "title": "Gallery",
-        "action": "#Gallery",
-        "icon": "photo"
+        "title": "Impostazioni",
+        "action": "#Settings",
+        "icon": "settings"
       },
-      {
-        "title": "Navigation",
-        "action": "#Navigation",
-        "icon": "arrowright"
-      },
-      {
-        "title": "Custom Events",
-        "action": "#CustomEvents",
-        "icon": "favorites"
-      },
-      {
-        "title": "Icons",
-        "action": "#IconSet",
-        "icon": "image"
-      }
     ]
   }
 });
