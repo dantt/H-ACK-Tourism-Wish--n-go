@@ -10,6 +10,7 @@
 }
 
 .custom-events .events-area:before {
+    content: "Touch here";
     color: #E5E5E5;
     text-align: center;
     font-size: 2em;

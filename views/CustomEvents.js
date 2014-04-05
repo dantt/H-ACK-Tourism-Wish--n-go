@@ -57,7 +57,7 @@
 	  father = $("#cont");
 	  image_index++;
 	  image_name = "hotel" + image_index + ".jpg";
-	  new_div =$("<div id='hotel" + image_index + "' class='events-area' style='position: absolute; background-image: url(\"" + image_name + "\"); width:600px; height: 400px; background-size:100%; margin: 0 auto;'></div>");
+	  new_div =$("<div id='hotel" + image_index + "' style='position: absolute; background-image: url(\"" + image_name + "\"); width:100%; background-size: auto 100%; background-repeat: no-repeat; background-position: left top; height: 100%;max-height:400px;'></div>");
 	  new_div.hide();
 	  father.append(new_div);
 	  new_div.fadeIn("slow");
