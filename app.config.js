@@ -110,6 +110,12 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
         "action": "#Settings",
         "icon": "settings"
       },
+      
+      {
+	"title": "Giulio",
+	"action": "#CustomEvents",
+	"icon": "settings"
+      },
     ]
   }
 });
