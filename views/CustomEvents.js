@@ -1,5 +1,8 @@
 ﻿KitchenSink.CustomEvents = function (params) {
-
+    var isDragging = false;
+    var current_x;
+    var prevY = 0;
+   
     var pointerEvents = [
             { name: "dxpointerdown", displayName: "down" },
             { name: "dxpointermove", displayName: "move" },
@@ -31,17 +34,44 @@
         swipeEvents: extendEvents(swipeEvents),
         pointerEvents: extendEvents(pointerEvents)
     };
-
+  
     viewModel.viewShown = function() {
         var eventsName = "";
         $.each(getAllEvents(), function(index, event) { eventsName += event.name + " "; });
-        $(".events-area").on(eventsName, function(e) {
+        $("#hotel1").on(eventsName, function(e) {
+            $.each(getAllEvents(), function(index, item) {
+                if(item.enabled() && item.name === e.type) {
+		    if(e.type == "dxpointerdown"){
+		      //current_x = e.pageX;
+		      //$("#hotel1").css("margin-left", 0);
+		      isDragging = true;
+		    }
+		    if(e.type == "dxpointerup"){
+		      isDragging = false;
+		    }
+		    if(e.type == "dxpointermove" && isDragging==true){
+		      $("#hotel1").animate({left: "+=5000"}, 2000);
+		      /*
+		      xdif = e.pageX - current_x;
+		      current_x = e.pageX;
+		      prop = $("#hotel1").css("margin-left");
+		      cur_margin = prop.substring(0, prop.length - 2);
+		      $("#hotel1").css("margin-left", (cur_margin + xdif) + "px" );*/
+		    }
+		    //console.log(e.type + isDragging);
+                    //item.count(item.count() + 1);
+                }
+            });
+        });
+	/*
+	$(".events-area").on(eventsName, function(e) {
             $.each(getAllEvents(), function(index, item) {
                 if(item.enabled() && item.name === e.type) {
                     item.count(item.count() + 1);
                 }
             });
         });
+        */
     };
     
     return viewModel;
