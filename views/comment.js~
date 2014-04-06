@@ -1,0 +1,9 @@
+<div data-options="dxView : { name: 'comment', title: 'Comment' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+      <div class="row" style="width:100%;">
+	<img src="user1.jpg" style="width: 40px; float: left;"> Mario Drago
+      </div>
+      
+    </div>
+</div> 
+ 
