@@ -97,7 +97,7 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
       },
       {
         "title": "I miei punti Fuel",
-        "action": "#fuel",
+        "action": "#Buy",
         "icon": "recharge"
       },
       {
