@@ -52,6 +52,7 @@
 }
 
 #round-compass {
+	background-size: 88%;
     background-image:url('../icons/compass.svg.png');
 }
 

@@ -47,7 +47,7 @@
 	    $("#hotel"+image_index).animate({left: "+=5000"}, 2000);
 	  }
 	  if(e.pageX < startPoint){
-	    $("#hotel"+image_index).animate({left: "-=5000"}, 2000);
+	    $("#hotel"+image_index).animate({left: "+=5000"}, 2000);
 	  }
 	}
       });
@@ -74,7 +74,7 @@
     }
     function image_events(){
       $('#img_cross').on("dxpointerdown", function(e){
-	$('#hotel'+image_index).animate({left: "-=5000"}, 2000);
+	$('#hotel'+image_index).animate({left: "+=5000"}, 2000);
 	isDragging = true;
 	$('#hotel'+image_index).trigger("dxpointerup");
       });
