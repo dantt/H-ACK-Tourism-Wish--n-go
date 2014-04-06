@@ -106,49 +106,18 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
         "icon": "agenda"
       },
       {
-        "title": "Impostazioni",
-        "action": "#Settings",
-        "icon": "settings"
-      },
-      
-      {
-	"title": "Giulio",
-	"action": "#CustomEvents",
-	"icon": "settings"
-      },
-      {
-	"title": "Dan",
-	"action": "#details",
-	"icon": "settings"
-      },
-      {
-	"title": "Sliders",
-	"action": "#Sliders",
-	"icon": "settings"
-      },
-      {
-	"title": "Maps",
-	"action": "#Maps",
-	"icon": "settings"
-      },
-      {
-	"title": "Fucker",
-	"action": "#EndBooking",
-	"icon": "settings"
-      },
-      {
-	"title": "GalleryGiulio",
-	"action": "#Gallery",
-	"icon": "settings"
-      },
-      {
 	"title": "Esperienze",
 	"action": "#Exp",
-	"icon": "settings"
+	"icon": "map"
       },
       {
 	"title": "Preferiti",
 	"action": "#Preferiti",
+	"icon": "like"
+      },
+      {
+	"title": "Impostazioni",
+	"action": "#Settings",
 	"icon": "settings"
       },
     ]

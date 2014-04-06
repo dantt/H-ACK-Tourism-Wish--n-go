@@ -129,6 +129,7 @@
     viewModel.viewShown = function() {
       $('#img_like').on("dxpointerdown", function(e){
 	Middle.addPreference(globalHotelId);
+	//alert(globalHotelId);
 	appendimage();
       });
       $('#img_cross').on("dxpointerdown", function(e){
