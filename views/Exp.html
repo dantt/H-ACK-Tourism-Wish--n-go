@@ -5,16 +5,6 @@
                 <p id="exp-saldo"></p>
             </div>
             
-            <script>
-                var s = (Middle.getUser().saldo || 0.0);
-                document.getElementById('exp-saldo').innerHTML = 'Saldo: ' + s.toFixed(2) + ' p';
-                setInterval(function() {
-                    var t = (Middle.getUser().saldo || 0.0);
-                    document.getElementById('exp-saldo').innerHTML = 'Saldo: ' + t.toFixed(2) + ' p';
-                }, 3000);
-            </script>
-
-            
             <div id="exp-sotto1">
                 <div><div></div></div>
                 <div><div></div></div>
