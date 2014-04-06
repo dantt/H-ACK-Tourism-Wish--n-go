@@ -1,3 +1,51 @@
 .c > input {
     text-align: center;
 }
+
+
+#slid-sotto1 {
+    margin-left: 4px;
+    padding-top: 25%;
+}
+
+#slid-sotto1 > div {
+    float: left;
+    margin-left: 4%;
+	position: relative;
+	padding-bottom: 20%;
+	height: 0;
+	width: 20%;
+}
+
+#slid-sotto1 > div:last-child {
+    margin-right: 4%;
+}
+
+#slid-sotto1 > div > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 1px solid black;
+	background-size: 70%;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+#slid-sotto1 > div:nth-child(1) > div {
+    background-image:url('../icons/BBBB/climbing.png');
+}
+
+#slid-sotto1 > div:nth-child(2) > div {
+    background-image:url('../icons/BBBB/tree79.png');
+}
+
+#slid-sotto1 > div:nth-child(3) > div {
+    background-image:url('../icons/heart.png');
+}
+
+#slid-sotto1 > div:nth-child(4) > div {
+    background-image:url('../icons/book.svg.png');
+}
