@@ -1,4 +1,4 @@
-﻿KitchenSink.CustomEvents = function (params) {
+﻿KitchenSink.CustomEvents = function () {
     var isDragging = false;
     var startPoint;
     var prevY = 0;
@@ -19,11 +19,13 @@
 	  var hotel = hotels.shift();
 	  console.log(hotel);
 	  globalHotelId = hotel.Id;
-	  new_div =$("<div id='hotel" + hotel.Id + "' style='background-image: url(\"http://h-ack-wd.azurewebsites.net" + hotel.Photos[0].Url + "\"); width:100%; background-size: auto 100%; background-repeat: no-repeat; background-position: center top; height: 400px;max-height:400px;'></div>");
+	  //new_div =$("<div id='hotel" + hotel.Id + "' style='background-image: url(\"http://h-ack-wd.azurewebsites.net" + hotel.Photos[0].Url + "\"); width:100%; background-size: auto 100%; background-repeat: no-repeat; background-position: center top; height: 400px;max-height:400px;'></div>");
 	  //new_div.hide();
+	  new_div = $('<img src="http://h-ack-wd.azurewebsites.net' + hotel.Photos[0].Url + '" width="100%" height="auto" />');
 	  father.html(new_div);
 	  $('#Nome').html(hotel.Name);
 	  $('#Indirizzo').html(hotel.Address + ' - ' + hotel.Location);
+	  $('#img_info').attr('onclick', 'KitchenSink.app.navigate({view: \'details\', id: \''+ hotel.Id +'\'})');
 	  
 	});
 	
@@ -33,11 +35,13 @@
 	  var hotel = hotels.shift();
 	  console.log(hotel);
 	  globalHotelId = hotel.Id;
-	  new_div =$("<div id='hotel" + hotel.Id + "' style='background-image: url(\"http://h-ack-wd.azurewebsites.net" + hotel.Photos[0].Url + "\"); width:100%; background-size: auto 100%; background-repeat: no-repeat; background-position: center top; height: 400px;max-height:400px;'></div>");
+	  //new_div =$("<div id='hotel" + hotel.Id + "' style='background-image: url(\"http://h-ack-wd.azurewebsites.net" + hotel.Photos[0].Url + "\"); width:100%; background-size: auto 100%; background-repeat: no-repeat; background-position: center top; height: 400px;max-height:400px;'></div>");
 	  //new_div.hide();
+	  new_div = $('<img src="http://h-ack-wd.azurewebsites.net' + hotel.Photos[0].Url + '" width="100%" height="auto" />');
 	  father.html(new_div);
 	  $('#Nome').html(hotel.Name);
 	  $('#Indirizzo').html(hotel.Address + ' - ' + hotel.Location);
+	  $('#img_info').attr('onclick', 'KitchenSink.app.navigate({view: \'details\', id: \''+ hotel.Id +'\'})');
 	};
 	
       

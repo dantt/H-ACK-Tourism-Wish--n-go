@@ -1,4 +1,4 @@
-<div data-options="dxView : { name: 'CustomEvents', title: 'CustomEvents' } ">
+<div data-options="dxView : { name: 'CustomEvents', title: 'Cerca' } ">
     <div data-options="dxContent : { targetPlaceholder: 'content' } " class="custom-events">
         <script type="text/html" id="cell-template">
             <div class="event">
@@ -11,26 +11,24 @@
                 </div>
             </div>
         </script>
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-        <div>
+        <link href="./css/bs.css" rel="stylesheet">
         <div class='container'>
-            <div id="cont" class="row-fluid">
+            <div class="row-fluid">
+	      <div id='cont'></div>
             <div data-bind="dxLoadPanel: { message: 'Loading...', visible: loadPanelVisible }"></div>
-	      <!--<div id="hotel1" style="position: absolute; background-image: url('hotel1.jpg'); width:100%; background-size: auto 100%;background-repeat: no-repeat; background-position: center top; height: 100%;max-height:400px;"></div>-->
-            </div>
-            <div class='row-fluid'>
-	      <div style='margin: 0 auto; width: 600px;'>
-	      <div style='background-color: #CCC; padding: 10px 100px;'>
+
+	      <div style='background-color: #CCC; padding: 10px 100px; width:100%;'>
 		<span id='Nome'></span>
 		<span id='Indirizzo' style='font-size:0.8em;'></span>
 	      </div>
-		<img id="img_cross" data-alt-src="cross_selected.png" src="./icons/cross.png" style="width: 50px;  margin-top:20px; margin-left: 50px;"></img>
-		<img id="img_like" data-alt-src="like_selected.png" src="./icons/heart.png" style="width: 50px; float:right;  margin-top:20px; margin-right:50px;"></img>
+	      <div style='margin-top: 25px; overflow:hidden;'>
+		<img id="img_cross" data-alt-src="cross_selected.png" src="./icons/cross.png" class='col-xs-2 col-xs-offset-3' ></img>
+		<img id="img_info" data-alt-src="info.png" src="./info.png" class='col-xs-2' onclick=''></img>
+		<img id="img_like" data-alt-src="like_selected.png" src="./icons/heart.png" class='col-xs-2' ></img>
 	      </div>
-	      <div data-bind="dxButton: { text: 'I miei posti', clickAction: toStarred }"></div>
+	      <!--<div data-bind="dxButton: { text: 'I miei posti', clickAction: KitchenSink.app.navigate('Preferiti') }"></div>-->
+	    
 	    </div>
 	</div>
-        </div>
     </div>
 </div>
