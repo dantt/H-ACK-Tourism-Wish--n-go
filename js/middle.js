@@ -163,7 +163,32 @@ var Middle = null;
     function getUser(obj) {
         return JSON.parse(localStorage.localUser || '{}');
     }
-
+    
+    function addPreference(id) {
+        added = JSON.parse(localStorage.hotelPreferences || '[]');
+        var obj = {
+            id: id,
+            addDate: new Date()
+        }
+        added.push(obj);
+        localStorage.hotelPreferences = JSON.stringify(added);
+    }
+    
+    function getAllPreferences() {
+        var a = JSON.parse(localStorage.hotelPreferences || '[]');
+        a.forEach(function(o) {
+            o.addDate = new Date(o.addDate);
+        });
+        return a;
+    }
+    
+    function resetPreferences() {
+        delete localStorage.hotelPreferences;
+    }
+    
+    
+    
+    
     Middle = {
         getProvidersByDistance: getProvidersByDistance,
         freeRooms: freeRooms,
@@ -171,7 +196,10 @@ var Middle = null;
         getAllBooked: getAllBooked,
         resetBooked: resetBooked,
         setUser: setUser,
-        getUser: getUser
+        getUser: getUser,
+        addPreference: addPreference,
+        getAllPreferences: getAllPreferences,
+        resetPreferences: resetPreferences
     }
     
 
