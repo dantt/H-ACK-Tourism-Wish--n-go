@@ -118,7 +118,7 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
       },
       {
 	"title": "Dan",
-	"action": "#Details",
+	"action": "#details",
 	"icon": "settings"
       },
       {

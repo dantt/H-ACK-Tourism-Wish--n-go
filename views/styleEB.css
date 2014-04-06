@@ -129,7 +129,6 @@ background-image:url('../icons/wifi.svg.png');
 }
 
 .commodities{
-  font-family: 'Raleway', sans-serif;
   width:100%;
   text-align: center;
   font-size: 200%;
@@ -143,7 +142,6 @@ background-image:url('../icons/wifi.svg.png');
 .book{
   clear: both;
   margin-top:20px;
-  font-family: 'Raleway', sans-serif;
   color: #FFF;
   vertical-align: center;
   display:table-cell;

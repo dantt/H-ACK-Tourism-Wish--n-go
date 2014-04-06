@@ -91,3 +91,9 @@ function toSearch() {
   KitchenSink.app.navigate('CustomEvents');
     
 };
+
+function toStarred() {
+  
+  KitchenSink.app.navigate('Starred');
+  
+};
