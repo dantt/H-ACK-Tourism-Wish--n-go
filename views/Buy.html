@@ -1,0 +1,40 @@
+<div data-options="dxView : { name: 'Buy', title: 'I miei punti Fuel' } ">
+    <div class="form" data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="content" data-bind="dxScrollView: { }">
+            <div class="dx-fieldset button">
+                <div class="dx-field">
+                    <div class="dx-field-label">Saldo corrente</div>
+                    <div class="dx-field-value">
+                        <div data-bind="dxTextBox: {value: saldo}"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="dx-fieldset button">
+                <div class="dx-field">
+                    <div class="dx-field-label">Package 5 p</div>
+                    <div class="dx-field-value">
+                        <div data-bind="dxButton: {text: 'Acquista', clickAction: function(){addFondi(5);}}"></div>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Package 10 p</div>
+                    <div class="dx-field-value">
+                        <div data-bind="dxButton: {text: 'Acquista', clickAction: function(){addFondi(10);}}"></div>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Package 20 p</div>
+                    <div class="dx-field-value">
+                        <div data-bind="dxButton: {text: 'Acquista', clickAction: function(){addFondi(20);}}"></div>
+                    </div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Package 50 p</div>
+                    <div class="dx-field-value">
+                        <div data-bind="dxButton: {text: 'Acquista', clickAction: function(){addFondi(50);}}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
