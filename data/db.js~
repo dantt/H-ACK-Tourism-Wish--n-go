@@ -209,12 +209,18 @@
         "Denver", "Baltimore", "Washington", "Nashville", "Louisville", "Milwaukee", "Portland", "Oklahoma"
     ];
     var gallery = [
-            { src: "hotel1.jpg" },
-            { src: "hotel2.jpg" },
-            { src: "hotel3.jpg" },
-            { src: "hotel4.jpg" },
-
- 
+            { src: "content/images/gallery/boats.jpg" },
+            { src: "content/images/gallery/cherry.jpg" },
+            { src: "content/images/gallery/country.jpg" },
+            { src: "content/images/gallery/field.jpg" },
+            { src: "content/images/gallery/headphone.jpg" },
+            { src: "content/images/gallery/keyboard.jpg" },
+            { src: "content/images/gallery/ny.jpg" },
+            { src: "content/images/gallery/orange.jpg" },
+            { src: "content/images/gallery/palms.jpg" },
+            { src: "content/images/gallery/sunrise.jpg" },
+            { src: "content/images/gallery/sunset.jpg" },
+            { src: "content/images/gallery/town.jpg" }
     ];
     var icons = ["Airplane", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowUp", "Bookmark", "Box", "Car", "Card", "Cart", "Chart", "Clock", "Close",
                  "Comment", "Doc", "Download", "Edit", "Email", "Event", "Favorites", "Find", "Folder", "Food", "Gift", "Globe", "Group", "Help",

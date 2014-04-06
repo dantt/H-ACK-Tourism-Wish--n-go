@@ -127,7 +127,7 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
 	"icon": "settings"
       },
       {
-	"title": "TF",
+	"title": "Maps",
 	"action": "#Maps",
 	"icon": "settings"
       },

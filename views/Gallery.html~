@@ -1,4 +1,6 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <div data-options="dxView : { name: 'Gallery', title: 'Gallery' } " >
     <div data-options="dxContent : { targetPlaceholder: 'content' } " >
         <div class="gallery" data-bind="dxGallery: { width: '80%', height: '40%', dataSource: data, showNavButtons: true }">

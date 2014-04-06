@@ -1,6 +1,19 @@
-<div data-options="dxView : { name: 'Sliders', title: 'HOLY F***' } " >
-    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
-      
+<div data-options="dxView : { name: 'Sliders', title: 'Sliders' } ">
+    <div class="form" data-options="dxContent : { targetPlaceholder: 'content' } ">
+        <div class="content" data-bind="dxScrollView: { }">
+
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Distanza</div>
+                    <div class="dx-field-value" data-bind="dxSlider: { value: slider.value, min: 0, max: 1000 }"></div>
+                    <div class="c" data-bind="dxTextBox: {value: slider.text}"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Prezzo</div>
+                    <div class="dx-field-value" data-bind="dxRangeSlider: { start: rangeSlider.minValue, end: rangeSlider.maxValue, min: 0, max: 1000 }"></div>
+                    <div class="c" data-bind="dxTextBox: {value: rangeSlider.text}"></div>
+                </div>
+            </div>
+        </div>
     </div>
-</div> 
- 
+</div>
