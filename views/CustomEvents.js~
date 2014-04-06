@@ -1,13 +1,8 @@
 ﻿KitchenSink.CustomEvents = function (params) {
     var isDragging = false;
-<<<<<<< HEAD
     var startPoint;
     var prevY = 0;
     var image_index = 1;
-=======
-    var current_x;
-    var prevY = 0;
->>>>>>> 6998262d476d88c954939ee6a4ffadb6d9043799
    
     var pointerEvents = [
             { name: "dxpointerdown", displayName: "down" },
@@ -41,7 +36,6 @@
         pointerEvents: extendEvents(pointerEvents)
     };
   
-<<<<<<< HEAD
     function create_events(element){
       element.on("dxpointerdown",function(e){
 	isDragging = true;
@@ -63,7 +57,7 @@
 	  father = $("#cont");
 	  image_index++;
 	  image_name = "hotel" + image_index + ".jpg";
-	  new_div =$("<div id='hotel" + image_index + "' class='events-area' style='position: absolute; background-image: url(\"" + image_name + "\"); width:600px; height: 400px; background-size:100%; margin: 0 auto;'></div>");
+	  new_div =$("<div id='hotel" + image_index + "' style='position: absolute; background-image: url(\"" + image_name + "\"); width:100%; background-size: auto 100%; background-repeat: no-repeat; background-position: left top; height: 100%;max-height:500px;'></div>");
 	  new_div.hide();
 	  father.append(new_div);
 	  new_div.fadeIn("slow");
@@ -97,45 +91,6 @@
     viewModel.viewShown = function() {
       create_events($('#hotel'+image_index));
       image_events();
-=======
-    viewModel.viewShown = function() {
-        var eventsName = "";
-        $.each(getAllEvents(), function(index, event) { eventsName += event.name + " "; });
-        $("#hotel1").on(eventsName, function(e) {
-            $.each(getAllEvents(), function(index, item) {
-                if(item.enabled() && item.name === e.type) {
-		    if(e.type == "dxpointerdown"){
-		      //current_x = e.pageX;
-		      //$("#hotel1").css("margin-left", 0);
-		      isDragging = true;
-		    }
-		    if(e.type == "dxpointerup"){
-		      isDragging = false;
-		    }
-		    if(e.type == "dxpointermove" && isDragging==true){
-		      $("#hotel1").animate({left: "+=5000"}, 2000);
-		      /*
-		      xdif = e.pageX - current_x;
-		      current_x = e.pageX;
-		      prop = $("#hotel1").css("margin-left");
-		      cur_margin = prop.substring(0, prop.length - 2);
-		      $("#hotel1").css("margin-left", (cur_margin + xdif) + "px" );*/
-		    }
-		    //console.log(e.type + isDragging);
-                    //item.count(item.count() + 1);
-                }
-            });
-        });
-	/*
-	$(".events-area").on(eventsName, function(e) {
-            $.each(getAllEvents(), function(index, item) {
-                if(item.enabled() && item.name === e.type) {
-                    item.count(item.count() + 1);
-                }
-            });
-        });
-        */
->>>>>>> 6998262d476d88c954939ee6a4ffadb6d9043799
     };
     
     return viewModel;
