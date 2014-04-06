@@ -1,6 +1,6 @@
 ﻿KitchenSink.CustomEvents = function (params) {
     var isDragging = false;
-    var startPoint;
+    var startPointx;
     var prevY = 0;
     var image_index = 1;
    
@@ -47,7 +47,7 @@
 	    $("#hotel"+image_index).animate({left: "+=5000"}, 2000);
 	  }
 	  if(e.pageX < startPoint){
-	    $("#hotel"+image_index).animate({left: "-=5000"}, 2000);
+	    $("#hotel"+image_index).animate({left: "+=5000"}, 2000);
 	  }
 	}
       });
@@ -57,7 +57,7 @@
 	  father = $("#cont");
 	  image_index++;
 	  image_name = "hotel" + image_index + ".jpg";
-	  new_div =$("<div id='hotel" + image_index + "' style='position: absolute; background-image: url(\"" + image_name + "\"); width:100%; background-size: auto 100%; background-repeat: no-repeat; background-position: left top; height: 100%;max-height:500px;'></div>");
+	  new_div =$("<div id='hotel" + image_index + "' style='position: absolute; background-image: url(\"" + image_name + "\"); width:100%; background-size: auto 100%; background-repeat: no-repeat; background-position: left top; height: 100%;max-height:400px;'></div>");
 	  new_div.hide();
 	  father.append(new_div);
 	  new_div.fadeIn("slow");
@@ -74,7 +74,7 @@
     }
     function image_events(){
       $('#img_cross').on("dxpointerdown", function(e){
-	$('#hotel'+image_index).animate({left: "-=5000"}, 2000);
+	$('#hotel'+image_index).animate({left: "+=5000"}, 2000);
 	isDragging = true;
 	$('#hotel'+image_index).trigger("dxpointerup");
       });
