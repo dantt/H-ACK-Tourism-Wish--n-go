@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'Exp', title: 'Esperienze' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div class="exp-splash" >
+            <div id="exp-sopra">
+                <p id="exp-saldo"></p>
+            </div>
+            
+            <script>
+                var s = (Middle.getUser().saldo || 0.0);
+                document.getElementById('exp-saldo').innerHTML = 'Saldo: ' + s.toFixed(2) + ' p';
+                setInterval(function() {
+                    var t = (Middle.getUser().saldo || 0.0);
+                    document.getElementById('exp-saldo').innerHTML = 'Saldo: ' + t.toFixed(2) + ' p';
+                }, 3000);
+            </script>
+
+            
+            <div id="exp-sotto1">
+                <div><div></div></div>
+                <div><div></div></div>
+                <div onclick="KitchenSink.app.navigate('BuyExp');"><div></div></div>
+                <div><div></div></div>
+            </div>
+            <div id="exp-sotto2">
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+                <div><div></div></div>
+            </div>
+        </div>
+    </div>
+</div>

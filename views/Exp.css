@@ -1,0 +1,106 @@
+﻿#exp-sotto1 {
+    margin-left: 4px;
+    padding-top: 25%;
+}
+
+#exp-sotto1 > div {
+    float: left;
+    margin-left: 4%;
+	position: relative;
+	padding-bottom: 20%;
+	height: 0;
+	width: 20%;
+}
+
+#exp-sotto1 > div:last-child {
+    margin-right: 4%;
+}
+
+#exp-sotto1 > div > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 1px solid black;
+	background-size: 70%;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+#exp-sotto1 > div:nth-child(1) > div {
+    background-image:url('../icons/BBBB/climbing.png');
+}
+
+#exp-sotto1 > div:nth-child(2) > div {
+    background-image:url('../icons/BBBB/football68.png');
+}
+
+#exp-sotto1 > div:nth-child(3) > div {
+    background-image:url('../icons/BBBB/mountain19.png');
+}
+
+#exp-sotto1 > div:nth-child(4) > div {
+    background-image:url('../icons/BBBB/silhouette2.png');
+}
+
+#exp-sotto2 {
+    margin-left: 4px;
+    padding-top: 30%;
+}
+
+#exp-sotto2 > div {
+    float: left;
+    margin-left: 4%;
+	position: relative;
+	padding-bottom: 20%;
+	height: 0;
+	width: 20%;
+}
+
+#exp-sotto2 > div:last-child {
+    margin-right: 4%;
+}
+
+#exp-sotto2 > div > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 1px solid black;
+	background-size: 70%;
+    background-repeat:no-repeat;
+	background-position:center;
+
+}
+
+#exp-sotto2 > div:nth-child(1) > div {
+    background-image:url('../icons/BBBB/skiing4.png');
+}
+
+#exp-sotto2 > div:nth-child(2) > div {
+    background-image:url('../icons/BBBB/speed7.png');
+}
+
+#exp-sotto2 > div:nth-child(3) > div {
+    background-image:url('../icons/BBBB/tree79.png');
+}
+
+#exp-sotto2 > div:nth-child(4) > div {
+    background-image:url('../icons/BBBB/vehicle2.png');
+}
+
+#exp-sopra {
+    margin: 5%;
+}
+
+#exp-sopra > p {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+

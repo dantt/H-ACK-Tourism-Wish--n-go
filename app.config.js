@@ -136,10 +136,14 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
 	"action": "#EndBooking",
 	"icon": "settings"
       },
-      
       {
 	"title": "GalleryGiulio",
 	"action": "#Gallery",
+	"icon": "settings"
+      },
+      {
+	"title": "Esperienze",
+	"action": "#Exp",
 	"icon": "settings"
       },
     ]
