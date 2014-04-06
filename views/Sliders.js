@@ -1,7 +1,7 @@
 ﻿KitchenSink.Sliders = function(params) {
     var viewModel = {
         slider: {
-            value: ko.observable(5)
+            value: ko.observable(100)
         },
         rangeSlider: {
             minValue: ko.observable(50),

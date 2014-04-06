@@ -13,8 +13,19 @@
                     <div class="dx-field-value" data-bind="dxRangeSlider: { start: rangeSlider.minValue, end: rangeSlider.maxValue, min: 0, max: 1000 }"></div>
                     <div class="c" data-bind="dxTextBox: {value: rangeSlider.text}"></div>
                 </div>
-                <br>
-                <div data-bind="dxButton: { text: 'Click me', clickAction: toSearch }"></div>
+                
+                <div class="slid-splash" >
+                    <div id="slid-sopra">
+                        <p id="slid-saldo"></p>
+                    </div>
+            
+                    <div id="slid-sotto1">
+                        <div onclick="toSearch();"><div></div></div>
+                        <div onclick="toSearch();"><div></div></div>
+                        <div onclick="toSearch();"><div></div></div>
+                        <div onclick="toSearch();"><div></div></div>
+                    </div>
+                </div>
                 
             </div>
         </div>
