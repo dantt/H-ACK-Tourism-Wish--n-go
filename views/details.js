@@ -29,7 +29,7 @@ KitchenSink.details = function (req) {
     $('#Nome').html(hotel.Name);
     $('#Indirizzo').html(hotel.Address + ' - ' + hotel.Zip + ' ' + hotel.Location);
     
-    $('#dtlbtn').attr('onclick', 'KitchenSink.app.navigate("endbooking/' + hotel.Id + ');');
+    $('#dtlbtn').attr('onclick', 'KitchenSink.app.navigate(\'EndBooking\');');
     
     
   });
