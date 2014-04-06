@@ -39,6 +39,7 @@
 }
 
 #round-search {
+	background-size: 58%;
     background-image:url('../icons/search.svg.png');
 }
 
