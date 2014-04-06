@@ -116,6 +116,11 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
 	"action": "#CustomEvents",
 	"icon": "settings"
       },
+      {
+	"title": "Dan",
+	"action": "#Details",
+	"icon": "settings"
+      },
     ]
   }
 });
