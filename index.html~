@@ -93,7 +93,7 @@
     <link rel="dx-template" type="text/html" href="views/endbooking.html"/>
 
 
-    <link rel="dx-template" type="text/html" href="views/sliders.html"/>
+    <link rel="dx-template" type="text/html" href="views/Sliders.html"/>
     <link rel="stylesheet" type="text/css" href="views/Sliders.css" />
     <script type="text/javascript" src="views/Sliders.js"></script>
     
@@ -101,18 +101,10 @@
     <!--<link rel="stylesheet" type="text/css" href="views/Buy.css" />-->
     <script type="text/javascript" src="views/Buy.js"></script>
     
-
-    <link rel="dx-template" type="text/html" href="views/BuyExp.html"/>
-    <!--<link rel="stylesheet" type="text/css" href="views/BuyExp.css" />-->
-    <script type="text/javascript" src="views/BuyExp.js"></script>
-    
-    <link rel="dx-template" type="text/html" href="views/Preferiti.html"/>
-    <!--<link rel="stylesheet" type="text/css" href="views/Preferiti.css" />-->
-    <script type="text/javascript" src="views/Preferiti.js"></script>
-    
     <link rel="dx-template" type="text/html" href="views/comment.html"/>
-    <!--<link rel="stylesheet" type="text/css" href="views/comment.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="views/Buy.css" />-->
     <script type="text/javascript" src="views/comment.js"></script>
+    
     
 </head>
 <body>
