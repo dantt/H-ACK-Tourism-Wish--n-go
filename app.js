@@ -62,5 +62,32 @@ $(function() {
         }
     }
 
-    KitchenSink.app.viewShown.add(showMenu);
+    //KitchenSink.app.viewShown.add(showMenu);
 });
+
+
+// Spaghetti your listeners
+
+
+
+function toMap() {
+  
+  KitchenSink.app.navigate('Maps');
+    
+};
+
+
+
+function toSliders() {
+    
+  KitchenSink.app.navigate('Sliders');
+    
+};
+
+
+
+function toSearch() {
+    
+  KitchenSink.app.navigate('CustomEvents');
+    
+};
