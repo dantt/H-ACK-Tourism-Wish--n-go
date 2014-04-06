@@ -1,35 +1,27 @@
 ﻿KitchenSink.Maps = function (params) {
     var basicOptions = {
-        location: "40.749825, -73.987963",
+        location: "45.5645927, 12.4280507",
         width: "100%",
         height: "100%",
-        zoom: 13,
-        markers: [
-          { label: "A", location: [40.737102, -73.990318] },
-          { label: "B", location: [40.749825, -73.987963] },
-          { label: "С", location: [40.755823, -73.986397] }
-        ],
-        routes: [{
-            weight: 5,
-            color: "blue",
-            locations: [
-              [40.737102, -73.990318],
-              [40.749825, -73.987963],
-              [40.755823, -73.986397]
-            ]
-        }]
+        zoom: 8,
+        markers: [{location: [45.5645927, 12.4280507], tooltip: "Posizione attuale"}],
+        readyAction: function (obj) {
+            Middle.getProvidersByDistance(45.5645927, 12.4280507, function(arr) {
+                var mrk = arr.map(function(o) {
+                    return {
+                        location: [o.Lat, o.Lng],
+                        tooltip: o.Name + ' (' + Math.floor(o.Distance) + 'km)'
+                    };
+                });
+                mrk.push(obj.component.option('markers')[0]);
+                obj.component.option('markers', mrk);
+                obj.component.option('zoom', 8);
+                obj.component.option('location', "45.5645927, 12.4280507");
+            });
+        }
     };
 
     var viewModel = {
-        tabs: [
-            { text: "Google map" },
-            { text: "Bing map" }           
-        ],
-        selectedTab: ko.observable(0),
-        mapBing: $.extend({}, basicOptions, {
-            provider: "bing",
-            mapType: "roadmap"
-        }),
         mapGoogle: $.extend({}, basicOptions, {
             provider: "google",
             mapType: "satellite"
