@@ -87,7 +87,7 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
     "navigation": [
       {
         "title": "Home",
-        "action": "/",
+        "action": "#Home",
         "icon": "home"
       },
       {
