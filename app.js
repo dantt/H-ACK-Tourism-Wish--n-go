@@ -10,25 +10,6 @@ $(function() {
         navigationType: KitchenSink.config.navigationType,
         navigation: getNavigationItems()
     });
-    
-    
-    
-    // Register views
-    
-    //KitchenSink.app.router.register(":view/:id/", { view: "details", id: 1 });
-    
-    //KitchenSink.app.router.register(":view/:id/", { view: "endbooking", id: 1 });
-    
-    //KitchenSink.app.router.register(":view/:id/", { view: "sliders", id: 1 });
-    
-    //KitchenSink.app.router.register(":view/:id/", { view: "endbooking", id: 1 });
-    
-    
-    
-    
-    
-    
-    
 
     KitchenSink.app.router.register(":view/:id", { view: "Home", id: undefined });
     
@@ -61,9 +42,6 @@ $(function() {
 
     function onDeviceReady() {
         document.addEventListener("backbutton", onBackButton, false);
-	
-	
-	
     }
 
     function onBackButton() {
@@ -85,27 +63,31 @@ $(function() {
     }
 
     //KitchenSink.app.viewShown.add(showMenu);
-    
-    
 });
 
 
 // Spaghetti your listeners
 
+
+
 function toMap() {
-    
-    KitchenSink.app.navigate('Maps');
+  
+  KitchenSink.app.navigate('Maps');
     
 };
+
+
 
 function toSliders() {
-  
+    
   KitchenSink.app.navigate('Sliders');
-  
+    
 };
 
+
+
 function toSearch() {
-  
+    
   KitchenSink.app.navigate('CustomEvents');
-  
+    
 };
