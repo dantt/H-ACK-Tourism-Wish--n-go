@@ -146,6 +146,11 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
 	"action": "#Exp",
 	"icon": "settings"
       },
+      {
+	"title": "Preferiti",
+	"action": "#Preferiti",
+	"icon": "settings"
+      },
     ]
   }
 });

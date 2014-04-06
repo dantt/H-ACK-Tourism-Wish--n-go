@@ -14,10 +14,10 @@
         
         if ((s-n) < 0) {
             var myDialog = DevExpress.ui.dialog.custom({
-                title: "Punti insufficienti",
-                message: "Non hai a disposizione abbastanza punti per questa attività.",
+                title: "Ci vuole più Fuel!",
+                message: "Acquista più punti Fuel per prenotare questa attività.",
                 buttons: [{
-                    text: "Compra più punti",
+                    text: "Acquista punti",
                     clickAction: function() {
                         KitchenSink.app.navigate('Buy');
                     }},

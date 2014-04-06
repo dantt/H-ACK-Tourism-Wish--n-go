@@ -1,0 +1,12 @@
+<div data-options="dxView : { name: 'Preferiti', title: 'Preferiti' } ">
+    <div id="myList" style="margin: 10px;" data-bind="dxList: {
+        dataSource: listDataSource,
+    }">
+        <div class="listItem" data-options="dxTemplate:{ name:'item' }">
+            <p style="font-size:larger;" data-bind="text: name"></p>
+            <p data-bind="text: location"></i></p>
+            <p>Salvato: <span data-bind="text: dateText"></span></p>
+      </div>
+    </div>
+</div>
+    
