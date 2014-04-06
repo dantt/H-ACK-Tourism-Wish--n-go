@@ -1,6 +1,7 @@
+<link href='./views/styleEB.css' rel='stylesheet' type='text/css'>
 <div data-options="dxView : { name: 'EndBooking', title: 'NO WAY IT WORKS' } " >
     <div data-options="dxContent : { targetPlaceholder: 'content' } " >
-      <div id='total' class='total'>150 €</div>
+      <div id='total' class='total'>150 €</div><br>
       
       <div class='booking-people'>
                 <div class="round-wrapper2" id="round-oneperson"><div class="round1"></div></div>
@@ -8,8 +9,8 @@
                 <div class="round-wrapper2 round-wrapper-last" id="round-threepersons"><div class="round1"></div></div>
       </div>
       
-      
-     <p class='commodities'>Scegli servizi aggiuntivi</p>
+      <p style="clear: both;"></p>
+     <p class='commodities' style="clear: both; margin-top: 20px;">Scegli servizi aggiuntivi</p><br>
       
      <div id="commodities-icons">
                 <div class="round-wrapper" id="round-shower"><div class="round"></div></div>
@@ -17,24 +18,17 @@
                 <div class="round-wrapper" id="round-wifi"><div class="round"></div></div>
                 <div class="round-wrapper round-wrapper-last" id="round-else"><div class="round"></div></div>
      </div>
-      
-      <a class='book' href=''>Prenota</a>
-      
-      
-    <script type='text/javascript'>
-      
-      $(window).ready(function() { $('.round1').click(function() {
-	
-	$('.round1').each(function() { $(this).css('background-color', 'white'); });
-	$(this).css('background-color', 'grey');
-      
-      });
-      
-      });
-    
-    
-    
-    </script>
+       <p style="clear: both;"></p>
+     <div style="width:100%;" >
+       <img src="icons/more3.png" style="height: 80px;  display:block;margin:auto;">
+     </div>
+       <p style="clear: both;"></p>
+       <div style='width:100%'>
+       <div style='margin: 0 auto; text-align:center;'>
+       <button class='book' href='' onclick='KitchenSink.app.navigate("Exp");'><img src="edit26.png" height='50px' width='auto'  />Prenota</button>
+       </div>
+       </div>
+     </div>
       
     </div>
 </div> 

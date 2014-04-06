@@ -1,0 +1,152 @@
+.home-splash {    
+  height: 100%;    
+  cursor: pointer;
+}
+
+#home-sopra img {
+width: 60%;
+margin: 0 20%;
+}
+
+#home-sotto {
+margin-left: 4px;
+}
+
+.round-wrapper {
+  float: left;
+  margin-left: 4%;
+  position: relative;
+  padding-bottom: 20%;
+  height: 0;
+  width: 20%;
+  background-size: 80%;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+.round-wrapper2 {
+  float: left;
+  margin-left: 4%;
+  position: relative;
+  padding-bottom: 27%;
+  height: 0;
+  width: 27%;
+  background-size: 80%;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+.round-wrapper-last {
+  margin-right: 4%;
+}
+
+.round, .round1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: solid #bbbbbb;
+  border-width: 1px;
+}
+
+#round-search {
+background-size: 58%;
+background-image:url('../icons/search.svg.png');
+}
+
+#round-recharge {
+background-image:url('../icons/recharge.svg.png');
+}
+
+#round-map {
+background-image:url('../icons/map.svg.png');
+}
+
+#round-compass {
+background-size: 88%;
+background-image:url('../icons/compass.svg.png');
+} 
+
+#round-oneperson {
+background-size: 60%;
+background-align: center;
+background-image:url('../icons/standing16.png');
+}
+
+#round-twopersons {
+  background-size: 60%;
+background-image:url('../icons/women10.png');
+}
+
+#round-threepersons {
+  background-size: 60%;
+background-image:url('../icons/family4.png');
+}
+
+#round-else{
+  background-size: 60%;
+background-image:url('../icons/dog22.png');
+}
+
+#round-shower{
+  background-size: 60%;
+background-image:url('../icons/restaurant7.png');
+}
+
+#round-bathtub {
+  background-size: 60%;
+background-image:url('../icons/bath.svg.png');
+}
+
+#round-wifi {
+  background-size: 80%;
+background-image:url('../icons/wifi.svg.png');
+}
+
+.book {
+    display:block;
+    color: #ffffff;
+    font-size: 20px;
+    background: #34d989;
+    padding: 20px 40px;
+    text-decoration: none;
+    
+    font: bold 11px Arial;
+  border-top: 1px solid #bbbbbb;
+  border-right: 1px solid #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
+  border-left: 1px solid #bbbbbb;
+}
+
+.total {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  color: green;
+  font-size:500%;
+  text-align: center;
+}
+
+.commodities{
+  font-family: 'Raleway', sans-serif;
+  width:100%;
+  text-align: center;
+  font-size: 200%;
+  font-style: italic;
+  
+}
+.commodities-icons{
+  margin-bottom: 20px;
+}
+
+.book{
+  clear: both;
+  margin-top:20px;
+  font-family: 'Raleway', sans-serif;
+  color: #FFF;
+  vertical-align: center;
+  display:table-cell;
+  font-size: 300%;
+  
+}
