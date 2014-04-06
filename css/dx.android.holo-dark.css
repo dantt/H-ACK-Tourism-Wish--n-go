@@ -32,6 +32,11 @@
   background: url('../icons/settings.svg.png');
 }
 
+.dx-theme-android .dx-icon-recharge
+{
+  background: url('../icons/recharge.svg.png');
+}
+
 .dx-theme-android-typography
 {
   background-color: #e8e8e8;

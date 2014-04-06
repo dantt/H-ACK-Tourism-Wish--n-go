@@ -32,6 +32,11 @@
   background: url('../icons/settings.svg.png');
 }
 
+.dx-theme-generic .dx-icon-recharge
+{
+  background: url('../icons/recharge.svg.png');
+}
+
 .dx-theme-generic .dx-icon
 {
   background-position: 50% 50%;
