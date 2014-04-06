@@ -1,1 +1,107 @@
- 
+.home-splash {    
+  height: 100%;    
+  cursor: pointer;
+}
+
+#home-sopra img {
+width: 60%;
+margin: 0 20%;
+}
+
+#home-sotto {
+margin-left: 4px;
+}
+
+.round-wrapper {
+  float: left;
+  margin-left: 4%;
+  position: relative;
+  padding-bottom: 20%;
+  height: 0;
+  width: 20%;
+  background-size: 80%;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+.round-wrapper2 {
+  float: left;
+  margin-left: 4%;
+  position: relative;
+  padding-bottom: 27%;
+  height: 0;
+  width: 27%;
+  background-size: 80%;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+.round-wrapper-last {
+  margin-right: 4%;
+}
+
+.round {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+#round-search {
+background-size: 58%;
+background-image:url('../icons/search.svg.png');
+}
+
+#round-recharge {
+background-image:url('../icons/recharge.svg.png');
+}
+
+#round-map {
+background-image:url('../icons/map.svg.png');
+}
+
+#round-compass {
+background-size: 88%;
+background-image:url('../icons/compass.svg.png');
+} 
+
+#round-oneperson {
+background-image:url('../icons/person1.png');
+}
+
+#round-twopersons {
+background-image:url('../icons/person2.png');
+}
+
+#round-threepersons {
+background-image:url('../icons/person3.png');
+}
+
+#round-shower, #round-else {
+background-image:url('../icons/shower.svg.png');
+}
+
+#round-bathtub {
+background-image:url('../icons/bathtub.svg.png');
+}
+
+#round-wifi {
+background-image:url('../icons/wifi.svg.png');
+}
+
+.book {
+    display:block;
+    color: #ffffff;
+    font-size: 20px;
+    background: #34d989;
+    padding: 20px 40px;
+    text-decoration: none;
+}
+
+.total {
+  color: green;
+  font-size:200%;
+}

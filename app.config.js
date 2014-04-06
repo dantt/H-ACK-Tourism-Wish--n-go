@@ -96,7 +96,7 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
         "icon": "booking"
       },
       {
-        "title": "Il mio Fuel Level",
+        "title": "I miei punti Fuel",
         "action": "#fuel",
         "icon": "recharge"
       },
@@ -129,6 +129,17 @@ window.KitchenSink = $.extend(true, window.KitchenSink, {
       {
 	"title": "Maps",
 	"action": "#Maps",
+	"icon": "settings"
+      },
+      {
+	"title": "Fucker",
+	"action": "#EndBooking",
+	"icon": "settings"
+      },
+      
+      {
+	"title": "GalleryGiulio",
+	"action": "#Gallery",
 	"icon": "settings"
       },
     ]
