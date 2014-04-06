@@ -3,9 +3,9 @@
       <div id='total' class='total'>150 €</div>
       
       <div class='booking-people'>
-                <div class="round-wrapper2" id="round-oneperson"><div class="round"></div></div>
-                <div class="round-wrapper2" id="round-twopersons"><div class="round"></div></div>
-                <div class="round-wrapper2 round-wrapper-last" id="round-threepersons"><div class="round"></div></div>
+                <div class="round-wrapper2" id="round-oneperson"><div class="round1"></div></div>
+                <div class="round-wrapper2" id="round-twopersons"><div class="round1"></div></div>
+                <div class="round-wrapper2 round-wrapper-last" id="round-threepersons"><div class="round1"></div></div>
       </div>
       
       
@@ -19,6 +19,22 @@
      </div>
       
       <a class='book' href=''>Prenota</a>
+      
+      
+    <script type='text/javascript'>
+      
+      $(window).ready(function() { $('.round1').click(function() {
+	
+	$('.round1').each(function() { $(this).css('background-color', 'white'); });
+	$(this).css('background-color', 'grey');
+      
+      });
+      
+      });
+    
+    
+    
+    </script>
       
     </div>
 </div> 
